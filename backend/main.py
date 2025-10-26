@@ -241,3 +241,7 @@ async def get_status():
 @app.get("/")
 async def root():
     return {"message": "GenAI Chatbot API", "docs": "/docs"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "service": "GenAI Chatbot API"}
